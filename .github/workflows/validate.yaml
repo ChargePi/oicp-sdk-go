@@ -1,4 +1,4 @@
-name: "Validate OCPI OpenAPI specification"
+name: "Validate OpenAPI specification"
 on:
   push:
     branches:

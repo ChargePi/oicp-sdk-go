@@ -13,6 +13,9 @@ on:
     paths-ignore:
       - "**.md"
 
+  workflow_dispatch:
+
+
 jobs:
   validate-oicp-v230-specification:
     name: "Validate the OICP 2.3.0 OpenAPI specification"
@@ -26,23 +29,3 @@ jobs:
         uses: char0n/swagger-editor-validate@v1.3.2
         with:
           definition-file: ./2.3.0/api/2.3.0.spec.yml
-
-  fmt:
-    name: Format Go code
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v4
-
-      - name: Set up Go
-        uses: actions/setup-go@v4
-        with:
-          go-version: 1.19
-
-      - name: Download Go modules
-        run: |
-          cd 2.3.0
-          go mod download
-
-      - name: Format Go code
-        run: go fmt ./2.3.0/...

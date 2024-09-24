@@ -13,13 +13,11 @@ Specification can be found in subfolder `api/2.3.0.spec.yml`
 
 ## Steps to generate the client
 
-Steps to generate changes for the client
+1. Adjust the OpenAPI specification `api/2.3.0.spec.yml`
+2. Make sure you are in `2.3.0` path
+3. Make sure you have installed the [oapi-codegen](https://github.com/deepmap/oapi-codegen#overview) package
+4. Regenerate the client using the following command:
 
-1) Adjust the OpenAPI specification `api/2.3.0.spec.yml`
-2) Make sure you are in `2.3.0` path
-3) Make sure you have installed the [oapi-codegen](https://github.com/deepmap/oapi-codegen#overview) package
-4) Regenerate the client using this command
-
-```shell
-oapi-codegen -package OICP api/2.3.0.spec.yml > client.go
-```
+    ```shell
+    oapi-codegen -package OICP api/2.3.0.spec.yml > client.go
+    ```

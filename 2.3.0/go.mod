@@ -1,4 +1,4 @@
-module github.com/GLCharge/oicp-client-go/2.3.0
+module github.com/ChargePi/oicp-client-go/2.3.0
 
 go 1.20
 

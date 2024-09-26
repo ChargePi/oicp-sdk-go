@@ -1,0 +1,8 @@
+package: oicp_v230
+output: server/server.gen.go
+generate:
+  models: true
+  gin-server: true
+output-options:
+  # to make sure that all types are generated
+  skip-prune: true
